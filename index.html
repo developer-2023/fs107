@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box-sizing</title>
+    <style>
+        body {
+            background: black;
+            color: white;
+        }
+        /*
+            box-sizing: content-box (content only) default
+            box-sizing: border-box (content + padding + border) often
+            box-sizing: padding-box (rare)
+        */
+        div {
+            width: 80px;
+            height: 80px;
+            margin: 5px;
+            background: red;
+            font-size: 12px;
+            float: left;
+        }
+        .padding {
+            padding: 15px;
+        }
+        .border {
+            border: 5px solid lightgreen;
+        }
+        .padding-border {
+            padding: 15px;
+            border: 5px solid lightgreen;
+        }
+        .bb {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <p>box-sizing: content-box (default)</p>
+    <div>content only</div>
+    <div class="padding">padding</div>
+    <div class="border">border</div>
+    <div class="padding-border">padding & border</div>
+    <hr style="clear: both;">
+    <p>box-sizing: border-box (often)</p>
+    <div class="bb">content only</div>
+    <div class="padding bb">padding</div>
+    <div class="border bb">border</div>
+    <div class="padding-border bb">padding & border</div>
+</body>
+</html>
